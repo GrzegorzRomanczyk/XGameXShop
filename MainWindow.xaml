@@ -10,7 +10,11 @@
         <StackPanel>
             <Menu>
                 <MenuItem Header="Magazyn">
-                    <MenuItem Header="Nowy towar"/>
+                    <MenuItem Header="Nowy towar">
+                        <MenuItem.Icon>
+                            <Image Source="MenuIcons\new.jpg"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
                     <MenuItem Header="Przegląd towarów"/>
                 </MenuItem>
                 <MenuItem Header="Dostawcy">
