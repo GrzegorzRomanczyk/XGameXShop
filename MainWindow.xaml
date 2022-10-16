@@ -7,6 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Menu>
+                <MenuItem Header="Magazyn">
+                    <MenuItem Header="Nowy towar"/>
+                    <MenuItem Header="Przegląd towarów"/>
+                </MenuItem>
+                <MenuItem Header="Dostawcy">
+                    <MenuItem Header="Kontrahenci">
+                        <MenuItem Header="Dodaj kontrahenta"/>
+                        <MenuItem Header="Przegląd kontrahentów"/>
+                        <Separator/>
+                        <MenuItem Header="Dodaj kontrahenta umowy zakupu"/>
+                    </MenuItem>
+                    <MenuItem Header="Nowy dokument">
+                        <MenuItem Header="Przyjęcie zewnętrzne(PZ)"/>
+                    </MenuItem>
+                    <MenuItem Header="Przegląd dokumentów"/>
+                </MenuItem>
+                <MenuItem Header="Odbiorcy">
+                    <MenuItem Header="Kontrahenci">
+                        <MenuItem Header="Dodaj kontrahenta"/>
+                        <MenuItem Header="Przegląd kontrahentów"/>
+                    </MenuItem>
+                    <MenuItem Header="Dodaj kartę klienta"/>
+                </MenuItem>
+                <MenuItem Header="Dokumenty">
+                    <MenuItem Header="Przegląd paragonów"/>
+                    <MenuItem Header="Faktura z paragonów"/>
+                    <Separator/>
+                    <MenuItem Header="Przegląd faktur"/>
+                    <Separator/>
+                    <MenuItem Header="Przegląd dostaw"/>
+                </MenuItem>
+                <MenuItem Header="Raporty">
+                    <MenuItem Header="Raport dobowy"/>
+                    <MenuItem Header="Raport kasjera"/>
+                    <Separator/>
+                    <MenuItem Header="Zestawienie sprzedanych towarów"/>
+                    <MenuItem Header="Zestawienie przyjętych towarów"/>
+                </MenuItem>
+                <MenuItem Header="Pomoc">
+                    <MenuItem Header="O programie"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
