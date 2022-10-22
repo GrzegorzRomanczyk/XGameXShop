@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XGameXShop.Converters
 {
-    class ConsoleTypeConverter : IConsoleTypConverter
+    public class ConsoleTypeConverter : IConsoleTypConverter
     {
         public string ConvertEnumToSting(ConsoleEnum consoleType)
         {

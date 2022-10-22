@@ -12,6 +12,6 @@ namespace XGameXShop
         Playstation_4,
         Playstation_5,
         Xbox_One,
-        Xbox_Series_x
+        Xbox_Series_X
     }
 }
