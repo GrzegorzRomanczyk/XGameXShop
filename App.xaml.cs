@@ -16,18 +16,6 @@ namespace XGameXShop
     /// </summary>
     public partial class App : Application
     {
-        //protected override void OnStartup(StartupEventArgs e)
-        //{
-        //    MainWindow = new MainWindow();
-        //    MainWindow.Show();
-
-        //    base.OnStartup(e);
-        //}
-
-        //public App()
-        //{
-        //}
-
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             IContainer container = Configure();
@@ -43,7 +31,6 @@ namespace XGameXShop
             var builder = new ContainerBuilder();
             builder.RegisterType<ViewModelMainWindow>().SingleInstance();
             builder.RegisterType<MainWindow>();
-            builder.RegisterType<NewProductWindow>();
             return builder.Build();
         }
     }
