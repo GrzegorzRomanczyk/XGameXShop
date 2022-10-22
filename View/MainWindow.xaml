@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
         <StackPanel>
             <Menu>
                 <MenuItem Header="Magazyn">
-                    <MenuItem Header="Nowy towar">
+                    <MenuItem Header="Nowy towar"
+                              Command="{Binding NewProductWindow}">
                         <MenuItem.Icon>
-                            <Image Source="MenuIcons\new.jpg"/>
+                            <Image Source="{StaticResource newIcon}"/>
                         </MenuItem.Icon>
                     </MenuItem>
                     <MenuItem Header="Przegląd towarów"/>
@@ -51,8 +54,8 @@
                     <MenuItem Header="Zestawienie sprzedanych towarów"/>
                     <MenuItem Header="Zestawienie przyjętych towarów"/>
                 </MenuItem>
-                <MenuItem Header="Pomoc">
-                    <MenuItem Header="O programie"/>
+                <MenuItem  Header="Pomoc">
+                    <MenuItem x:Name="About" Header="O programie" Command="{Binding OpenAbout}"/>
                 </MenuItem>
             </Menu>
         </StackPanel>
