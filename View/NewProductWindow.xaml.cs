@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using XGameXShop.ViewModels;
 
 namespace XGameXShop.View
 {
@@ -19,8 +20,9 @@ namespace XGameXShop.View
     /// </summary>
     public partial class NewProductWindow : Window
     {
-        public NewProductWindow()
+        public NewProductWindow(NewProductWindowViewModel viewModel)
         {
+            DataContext = viewModel;
             InitializeComponent();
         }
     }

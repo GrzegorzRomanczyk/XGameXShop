@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using XGameXShop.Converters;
 using XGameXShop.View;
 using XGameXShop.ViewModels;
 
@@ -29,8 +30,10 @@ namespace XGameXShop
         public IContainer Configure()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<ViewModelMainWindow>().SingleInstance();
             builder.RegisterType<MainWindow>();
+            builder.RegisterType<ViewModelMainWindow>().SingleInstance();
+            builder.RegisterType<NewProductWindowViewModel>().SingleInstance();
+            builder.RegisterType<ConsoleTypeConverter>().As<IConsoleTypConverter>();
             return builder.Build();
         }
     }

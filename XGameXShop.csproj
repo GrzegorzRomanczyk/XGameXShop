@@ -83,8 +83,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ConsoleTypeConverter.cs" />
+    <Compile Include="Converters\IConsoleTypConverter.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\RelayCommand.cs" />
+    <Compile Include="ViewModels\NewProductWindowViewModel.cs" />
     <Compile Include="ViewModels\ViewModelMainWindow.cs" />
     <Compile Include="View\NewProductWindow.xaml.cs">
       <DependentUpon>NewProductWindow.xaml</DependentUpon>
