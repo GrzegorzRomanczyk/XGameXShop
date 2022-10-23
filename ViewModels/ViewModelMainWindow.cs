@@ -19,23 +19,25 @@ namespace XGameXShop.ViewModels
 
         public ViewModelMainWindow(NewProductWindowViewModel newProductWindoVM)
         {
-            NewProductWindow = new RelayCommand(obj => OnOpenNewProductWindow(obj), obj => true);
-            OpenAbout = new RelayCommand(obj => OnOpenAbout(obj), obj => true);
-            ViewLoaded = new RelayCommand(obj => OnViewLoaded(obj), obj => true);
+            NewProductWindow = new RelayCommand(obj => OnOpenNewProductWindow(), obj => true);
+            OpenAbout = new RelayCommand(obj => OnOpenAbout(), obj => true);
+            ViewLoaded = new RelayCommand(obj => OnViewLoaded(), obj => true);
             this.newProductWindoVM = newProductWindoVM;
         }
 
-        private void OnOpenNewProductWindow(object obj)
+        private void OnOpenNewProductWindow()
         {
+            newProductWindoVM.SelectedConsoleType = ConsoleEnum.None;
+            newProductWindoVM.SelectedPEGIType = PEGIEnum.None;
             NewProductWindow newProductWindow = new NewProductWindow(newProductWindoVM);
             newProductWindow.Show();
         }
-        private void OnOpenAbout(object obj)
+        private void OnOpenAbout()
         {
             MessageBox.Show("Migracja pracy inzynierskiej napisanej w Windows Forms do WPF");
         }
 
-        private void OnViewLoaded(object obj)
+        private void OnViewLoaded()
         {
             // moze kiedys tu cos bedzie zwiazanego z baza danych albo uzytkownikiem
         }

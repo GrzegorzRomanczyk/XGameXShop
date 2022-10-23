@@ -5,20 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XGameXShop.View"
         mc:Ignorable="d"
-        Title="Nowy produkt" Height="450" Width="400">
+        Title="Nowy produkt" Height="250" Width="350">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="TextBoxStyle">
+            <Setter Property="Width" Value="200"/>
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Width" Value="65"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="2.5,0"/>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="ComboBoxStyle">
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style TargetType="StackPanel" x:Key="ButtonsStackPanelStyle">
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style TargetType="StackPanel" x:Key="HorizontalStackPanelStyle">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Nazwa"/>
-            <TextBox/>
-            <TextBlock Text="Cena brutto"/>
-            <TextBox/>
-            <TextBlock Text="Stawka VAT"/>
-            <TextBox/>
-            <TextBlock Text="Kategoria wiekowa"/>
-            <TextBox/>
-            <ComboBox ItemsSource="{Binding ConsoleType}" SelectedItem="{Binding SelectedConsoleType}"/>
-            <Button Content="Zapisz"/>
-            <Button Content="Wyczyść"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.ColumnSpan="2">
+            <StackPanel Style="{StaticResource HorizontalStackPanelStyle}">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="Nazwa"/>
+                <TextBox Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource HorizontalStackPanelStyle}">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="Konsola"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ConsoleType}" SelectedItem="{Binding SelectedConsoleType}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource HorizontalStackPanelStyle}">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="Cena brutto"/>
+                <TextBox Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource HorizontalStackPanelStyle}">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="Stawka VAT"/>
+                <TextBox Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource HorizontalStackPanelStyle}">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="Kategoria wiekowa"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding PEGIType}" SelectedItem="{Binding SelectedPEGIType}"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ButtonsStackPanelStyle}">
+            <Button Style="{StaticResource ButtonStyle}" Content="Zapisz"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Wyczyść"/>
         </StackPanel>
     </Grid>
 </Window>
